@@ -1,0 +1,42 @@
+{
+  "name": "gridspot",
+  "description": "Gridspot for your cli",
+  "version": "0.0.0",
+  "homepage": "https://github.com/alejandromg/gridspot",
+  "author": {
+    "name": "Alejandro Morales",
+    "email": "vamg008@gmail.com",
+    "url": "http://alejandromorales.co.cc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alejandromg/gridspot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alejandromg/gridspot/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/alejandromg/gridspot/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [],
+  "dependencies": {
+    "request": "~2.9.203"
+  },
+  "optionalDependencies": {
+    "cdir": "~0.1.2"
+  },
+  "bin": {
+    "gridspot": "./bin/gridspot"
+  },
+  "preferGlobal": "true"
+}
