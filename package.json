@@ -1,7 +1,7 @@
 {
   "name": "gridspot",
   "description": "Gridspot for your cli",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/alejandromg/gridspot",
   "author": {
     "name": "Alejandro Morales",
