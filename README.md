@@ -1,6 +1,6 @@
 # gridspot
 
-Gridspot for the rest of us.
+[Gridspot](https://gridspot.com) for the rest of us.
 
 **node.js cli-tool**
 
