@@ -48,7 +48,7 @@ for (var key in process.argv){
 function showHelp (){
     console.log('\n\tGridspot for your cli\n');
     console.log('\tusage:\n');
-    console.log('\t\tgridspot <API_KEY>\t\t Simple usage. <API_KEY> from https://gridspot.com/compute/account');
+    console.log('\t\tgridspot -k, --key <API_KEY>\t Simple usage. <API_KEY> from https://gridspot.com/compute/account');
     console.log('\t\tgridspot -s,--save <API_KEY>\t Save the <API_KEY> to ~/.gridspot so future request you can avoid the api key.');
     console.log('\t\tgridspot -i <API_KEY>\t\t Interactive response (if available)');
     console.log('\t\tgridspot -r, --raw <API_KEY>\t Raw response');
@@ -75,6 +75,9 @@ if (params.version || params.v) {
     process.exit(1);
 }
 
+
+if (params) API_KEY = params.key || params.k;
+
 var key = API_KEY || config.api;
 var loop = 0;
 
@@ -86,7 +89,7 @@ if (key) {
         qs: {'api_key': key}
     }, function (error, response){
         if (error) throw error;
-        if (~response.body.search('<html')) throw new Error('The response is wrong malformed');
+        if (~response.body.search('<html')) throw new Error('The response is malformed');
         response.body = JSON.parse(response.body);
         if (params.raw) return console.log(JSON.stringify(response.body, null, 2));
         if (params.i) return console.dir(response.body);
