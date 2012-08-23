@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/alejandromg/gridspot.png)](http://travis-ci.org/alejandromg/gridspot)
 # gridspot
 
 [Gridspot](https://gridspot.com) for the rest of us.
